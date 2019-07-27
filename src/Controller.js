@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import zoomIn from './images/zoomin_rest.png';
 import zoomInHover from './images/zoomin_hover.png';
 import zoomOut from './images/zoomout_rest.png';
@@ -8,110 +8,107 @@ import resetHover from './images/home_hover.png';
 import fullPage from './images/fullpage_rest.png';
 import fullPageHover from './images/fullpage_hover.png';
 
-// Notes: The component is named controller rather than a navigator.
+// The component is named controller rather than a navigator.
 // In OSD, the navigator is a mini-map that shows the current location within an image.
-// Images are imported rather than placed in the public folder.
-// not used a tag
 
 const Controller = () => {
-  const zoomInRef = useRef();
-  const zoomOutRef = useRef();
-  const resetRef = useRef();
-  const fullPageRef = useRef();
+  // Refs to interact with the button icons
+  // connected to the image tags of each button
+  const zoomInButtonRef = useRef();
+  const zoomOutButtonRef = useRef();
+  const resetButtonRef = useRef();
+  const fullPageButtonRef = useRef();
 
-  const handleMouseOverFocus = useCallback((e) => {
-    switch (e.target.id) {
-      case 'zoom-in':
-        zoomInRef.current.src = zoomInHover;
+
+  // When buttons or images are hovered or focused(tabbed),
+  // the image sources change
+  const handleHoverFocus = useCallback((e) => {
+    switch (e.target.className) {
+      case 'zoomInButton':
+        zoomInButtonRef.current.src = zoomInHover;
         break;
-      case 'zoom-out':
-        zoomOutRef.current.src = zoomOutHover;
+      case 'zoomOutButton':
+        zoomOutButtonRef.current.src = zoomOutHover;
         break;
-      case 'reset':
-        resetRef.current.src = resetHover;
+      case 'resetButton':
+        resetButtonRef.current.src = resetHover;
         break;
-      case 'full-page':
-        fullPageRef.current.src = fullPageHover;
+      case 'fullPageButton':
+        fullPageButtonRef.current.src = fullPageHover;
         break;
       default:
         return null;
     }
   }, []);
 
-  const handleMouseOutBlur = useCallback((e) => {
-    switch (e.target.id) {
-      case 'zoom-in':
-        zoomInRef.current.src = zoomIn;
+  const resetHoverFocus = useCallback((e) => {
+    switch (e.target.className) {
+      case 'zoomInButton':
+        zoomInButtonRef.current.src = zoomIn;
         break;
-      case 'zoom-out':
-        zoomOutRef.current.src = zoomOut;
+      case 'zoomOutButton':
+        zoomOutButtonRef.current.src = zoomOut;
         break;
-      case 'reset':
-        resetRef.current.src = reset;
+      case 'resetButton':
+        resetButtonRef.current.src = reset;
         break;
-      case 'full-page':
-        fullPageRef.current.src = fullPage;
+      case 'fullPageButton':
+        fullPageButtonRef.current.src = fullPage;
         break;
       default:
         return null;
     }
-  }, []);
+  });
 
   return (
     <nav>
-      <ul className="control-buttons">
-        <li>
-          <img
-            id="zoom-in"
-            src={zoomIn}
-            onMouseOver={handleMouseOverFocus}
-            onFocus={handleMouseOverFocus}
-            onMouseOut={handleMouseOutBlur}
-            onBlur={handleMouseOutBlur}
-            ref={zoomInRef}
-            alt="zoom in"
-          />
-        </li>
-        <li>
-          <img
-            id="zoom-out"
-            src={zoomOut}
-            onMouseOver={handleMouseOverFocus}
-            onFocus={handleMouseOverFocus}
-            onMouseOut={handleMouseOutBlur}
-            onBlur={handleMouseOutBlur}
-            ref={zoomOutRef}
-            alt="zoom out"
-          />
-        </li>
-        <li>
-          <img
-            id="reset"
-            src={reset}
-            onMouseOver={handleMouseOverFocus}
-            onFocus={handleMouseOverFocus}
-            onMouseOut={handleMouseOutBlur}
-            onBlur={handleMouseOutBlur}
-            ref={resetRef}
-            alt="reset"
-          />
-        </li>
-        <li>
-          <img
-            id="full-page"
-            src={fullPage}
-            onMouseOver={handleMouseOverFocus}
-            onFocus={handleMouseOverFocus}
-            onMouseOut={handleMouseOutBlur}
-            onBlur={handleMouseOutBlur}
-            ref={fullPageRef}
-            alt="full page"
-          />
-        </li>
+      <ul className="controlButtons">
+        <button
+          id="zoomIn"
+          className="zoomInButton"
+          type="button"
+          onMouseOver={handleHoverFocus}
+          onFocus={handleHoverFocus}
+          onMouseOut={resetHoverFocus}
+          onBlur={resetHoverFocus}
+        >
+          <img className="zoomInButton" src={zoomIn} ref={zoomInButtonRef} alt="zoom in" />
+        </button>
+        <button
+          id="zoomOut"
+          className="zoomOutButton"
+          type="button"
+          onMouseOver={handleHoverFocus}
+          onFocus={handleHoverFocus}
+          onMouseOut={resetHoverFocus}
+          onBlur={resetHoverFocus}
+        >
+          <img className="zoomOutButton" src={zoomOut} ref={zoomOutButtonRef} alt="zoom out" />
+        </button>
+        <button
+          id="reset"
+          className="resetButton"
+          type="button"
+          onMouseOver={handleHoverFocus}
+          onFocus={handleHoverFocus}
+          onMouseOut={resetHoverFocus}
+          onBlur={resetHoverFocus}
+        >
+          <img className="resetButton" src={reset} ref={resetButtonRef} alt="reset" />
+        </button>
+        <button
+          id="fullPage"
+          className="fullPageButton"
+          type="button"
+          onMouseOver={handleHoverFocus}
+          onFocus={handleHoverFocus}
+          onMouseOut={resetHoverFocus}
+          onBlur={resetHoverFocus}
+        >
+          <img className="fullPageButton" src={fullPage} ref={fullPageButtonRef} alt="full page" />
+        </button>
       </ul>
     </nav>
-
   );
 };
-
 export default Controller;

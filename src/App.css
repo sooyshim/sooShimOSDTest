@@ -26,7 +26,7 @@ section {
 
 /* controller */
 
-.control-buttons {
+.controlButtons {
   margin: 0 auto;
   padding: 0;
   display: flex;
@@ -34,6 +34,14 @@ section {
   align-items: center;
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+button:focus{
+  border: 1px solid red;
+}
 /* OSD viewer: image container */
 .container {
   width: 100%;
@@ -61,3 +69,4 @@ canvas {
     min-height: 70vh;
   }
 }
+

@@ -39,10 +39,10 @@ const OpenSeadragonViewer = () => {
         },
       },
     },
-    zoomInButton: 'zoom-in',
-    zoomOutButton: 'zoom-out',
+    zoomInButton: 'zoomIn',
+    zoomOutButton: 'zoomOut',
     homeButton: 'reset',
-    fullPageButton: 'full-page',
+    fullPageButton: 'fullPage',
   };
 
 
@@ -65,13 +65,16 @@ export default OpenSeadragonViewer;
 
 
 // ---options to pass to OSD viewer---
-// id : the id of the element to which OSD will be rendered
+// id : the id of the element to which OSD will be rendered.
 // tileSources: information on image files
 // zoomInButton...fullPageButton: customizing navigation buttons.
 // Here, each value of keys should match the id of the element will perform the action
 // (e.g. <a id="zoom-in"></a> for the value "zoom-in")
 
 // Notice: the file path of "Url" in Image is pointing to the public folder.
-// This prevents errors of image loading.
-// When assets are stored in the src folder, OSD loses the access to them inside a react component.
-// One must
+// This prevents image loading error.
+// In order for images to load, it is recommended/required to import images to a component.
+// The images will be processed by webpack but by putting them in the public folder,
+// the webpack will not process the images and assets live outside of the system.
+// In order to use OSD, the assets should live in the public folder.
+// This will give OSD direct access to the assets.
