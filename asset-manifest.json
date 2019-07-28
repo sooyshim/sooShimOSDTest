@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sooShimOSDTest/static/css/main.df45c3e9.chunk.css",
+    "main.css": "/sooShimOSDTest/static/css/main.b2528fc6.chunk.css",
     "main.js": "/sooShimOSDTest/static/js/main.445b20bf.chunk.js",
     "main.js.map": "/sooShimOSDTest/static/js/main.445b20bf.chunk.js.map",
     "runtime~main.js": "/sooShimOSDTest/static/js/runtime~main.d63cfa61.js",
@@ -8,8 +8,8 @@
     "static/js/2.18711b5e.chunk.js": "/sooShimOSDTest/static/js/2.18711b5e.chunk.js",
     "static/js/2.18711b5e.chunk.js.map": "/sooShimOSDTest/static/js/2.18711b5e.chunk.js.map",
     "index.html": "/sooShimOSDTest/index.html",
-    "precache-manifest.cacf91fcf7f7f246dffa7573c36880c8.js": "/sooShimOSDTest/precache-manifest.cacf91fcf7f7f246dffa7573c36880c8.js",
+    "precache-manifest.4aaf8d89380e603985b36650cf6d8a0d.js": "/sooShimOSDTest/precache-manifest.4aaf8d89380e603985b36650cf6d8a0d.js",
     "service-worker.js": "/sooShimOSDTest/service-worker.js",
-    "static/css/main.df45c3e9.chunk.css.map": "/sooShimOSDTest/static/css/main.df45c3e9.chunk.css.map"
+    "static/css/main.b2528fc6.chunk.css.map": "/sooShimOSDTest/static/css/main.b2528fc6.chunk.css.map"
   }
 }
