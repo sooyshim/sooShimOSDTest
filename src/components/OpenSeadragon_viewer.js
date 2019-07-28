@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import OpenSeadragon from 'openseadragon';
-import './App.css';
+import '../styles/App.css';
 
 const OpenSeadragonViewer = () => {
   // Assumption:
@@ -39,25 +39,21 @@ const OpenSeadragonViewer = () => {
         },
       },
     },
-    zoomInButton: 'zoomIn',
-    zoomOutButton: 'zoomOut',
+    zoomInButton: 'zoomin',
+    zoomOutButton: 'zoomout',
     homeButton: 'reset',
-    fullPageButton: 'fullPage',
+    fullPageButton: 'fullpage',
   };
 
-
-  const containerRef = useRef();
-
   // useEffect: OSD runs after the div mounts to the DOM
-  // OSD re-runs when options the url changes
+  // OSD re-runs when options the url and options change
   useEffect(() => {
-    containerRef.current.focus();
     OpenSeadragon(options);
-  }, [url]);
+  }, [options, url]);
 
   return (
   // OSD is rendered inside this div
-    <div id="container" className="container" ref={containerRef} />
+    <div id="container" className="container" />
   );
 };
 
