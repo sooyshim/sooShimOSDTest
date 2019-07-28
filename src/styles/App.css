@@ -110,13 +110,12 @@ button {
 }
 
 /* OSD viewer(image container) */
+/* There MUST be explicit height and width set for the container div of OSD */
+/* Otherwise, the container will not be shown in mobile devices */
 .container {
-  width: 100%;
-  min-height: 60vh;
-}
-
-canvas {
-  width: 100%;
+  /* 4:3 ratio */
+  height: 67vh;
+  width: 90vw;
 }
 
 /* decorative bar at the bottom */
@@ -131,9 +130,11 @@ canvas {
   nav {
     align-self: flex-start;
   }
-
+  
   .container {
-    min-height: 70vh;
+    /* 4:3 ratio */
+    height: 64vh;
+    width: 85vw;
   }
 }
 

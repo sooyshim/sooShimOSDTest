@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
-import zoomIn from './styles/ui_images/zoomin_rest.png';
-import zoomInHover from './styles/ui_images/zoomin_hover.png';
-import zoomOut from './styles/ui_images/zoomout_rest.png';
-import zoomOutHover from './styles/ui_images/zoomout_hover.png';
-import reset from './styles/ui_images/home_rest.png';
-import resetHover from './styles/ui_images/home_hover.png';
-import fullPage from './styles/ui_images/fullpage_rest.png';
-import fullPageHover from './styles/ui_images/fullpage_hover.png';
+import zoomIn from '../styles/ui_images/zoomin_rest.png';
+import zoomInHover from '../styles/ui_images/zoomin_hover.png';
+import zoomOut from '../styles/ui_images/zoomout_rest.png';
+import zoomOutHover from '../styles/ui_images/zoomout_hover.png';
+import reset from '../styles/ui_images/home_rest.png';
+import resetHover from '../styles/ui_images/home_hover.png';
+import fullPage from '../styles/ui_images/fullpage_rest.png';
+import fullPageHover from '../styles/ui_images/fullpage_hover.png';
 
 // The component is named controller rather than a navigator.
 // In OSD, the navigator is a mini-map that shows the current location within an image.

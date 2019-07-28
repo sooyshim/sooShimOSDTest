@@ -25,6 +25,7 @@ const OpenSeadragonViewer = () => {
   // See below for notes on each values
   const options = {
     id: 'container',
+    getImageURL: `${process.env.PUBLIC_URL}/dzi_files/`,
     tileSources: {
       Image: {
         xmlns: 'http://schemas.microsoft.com/deepzoom/2009',
@@ -52,7 +53,7 @@ const OpenSeadragonViewer = () => {
   }, [options, url]);
 
   return (
-  // OSD is rendered inside this div
+    // OSD is rendered inside this div
     <div id="container" className="container" />
   );
 };
