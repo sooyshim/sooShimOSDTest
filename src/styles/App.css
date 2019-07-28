@@ -55,58 +55,58 @@ button {
 
 /* zoomin button */
 .zoomin_button {
-  background-image: url('./ui_images/zoomin_rest.png');
+  background-image: url('../assets/ui_images/zoomin_rest.png');
 }
 
 .zoomin_button:hover,
 .zoomin_button:focus {
-  background-image: url('./ui_images/zoomin_hover.png');
+  background-image: url('../assets/ui_images/zoomin_hover.png');
 }
 
 .zoomin_button:active {
-  background-image: url('./ui_images/zoomin_pressed.png');
+  background-image: url('../assets/ui_images/zoomin_pressed.png');
 }
 
 /* zoomout button */
 .zoomout_button {
-  background-image: url('./ui_images/zoomout_rest.png');
+  background-image: url('../assets/ui_images/zoomout_rest.png');
 }
 
 .zoomout_button:hover,
 .zoomout_button:focus {
-  background-image: url('./ui_images/zoomout_hover.png');
+  background-image: url('../assets/ui_images/zoomout_hover.png');
 }
 
 .zoomout_button:active {
-  background-image: url('./ui_images/zoomout_pressed.png');
+  background-image: url('../assets/ui_images/zoomout_pressed.png');
 }
 
 /* reset button(home) */
 .reset_button {
-  background-image: url('./ui_images/home_rest.png');
+  background-image: url('../assets/ui_images/home_rest.png');
 }
 
 .reset_button:hover,
 .reset_button:focus {
-  background-image: url('./ui_images/home_hover.png');
+  background-image: url('../assets/ui_images/home_hover.png');
 }
 
 .reset_button:active {
-  background-image: url('./ui_images/home_pressed.png');
+  background-image: url('../assets/ui_images/home_pressed.png');
 }
 
 /* fullPage button */
 .fullpage_button {
-  background-image: url('./ui_images/fullpage_rest.png');
+  background-image: url('../assets/ui_images/fullpage_rest.png');
 }
 
 .fullpage_button:hover,
 .fullpage_button:focus {
-  background-image: url('./ui_images/fullpage_hover.png');
+  background-image: url('../assets/ui_images/fullpage_hover.png');
 }
 
 .fullpage_button:active {
-  background-image: url('./ui_images/fullpage_pressed.png');
+  background-image: url('../assets/ui_images/fullpage_pressed.png');
 }
 
 /* OSD viewer(image container) */
