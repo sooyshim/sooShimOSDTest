@@ -110,8 +110,6 @@ button {
 }
 
 /* OSD viewer(image container) */
-/* There MUST be explicit height and width set for the container div of OSD */
-/* Otherwise, the container will not be shown in mobile devices */
 .container {
   /* 4:3 ratio */
   height: 67vh;
